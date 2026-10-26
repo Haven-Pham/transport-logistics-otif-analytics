@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Transport_Logistics_OTIF"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "be2a21d5-d923-4213-b88c-5542458a6b25"
+  }
+}

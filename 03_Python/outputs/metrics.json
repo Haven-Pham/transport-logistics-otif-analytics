@@ -1,0 +1,1193 @@
+{
+  "kpi": {
+    "Trips": 3582.0,
+    "Trips in core period (Dec-19 to Aug-20)": 3571.0,
+    "OTIF % (on-time)": 0.38553880513679506,
+    "Median lead time (days)": 4.285,
+    "Avg lead time (days)": 5.473844086021505,
+    "Median delay of late trips (hrs)": 99.4,
+    "Total distance (km)": 3095065.8,
+    "Median distance (km)": 525.0,
+    "Carriers": 192.0,
+    "Customers": 34.0,
+    "Trips with infeasible SLA": 0.4371859296482412,
+    "Empty-return trips": 0.10552763819095477,
+    "Est. freight spend (INR M)": 123.106322
+  },
+  "road_factor": 1.3110455588331695,
+  "monthly": [
+    {
+      "BookingMonth": "2019-12",
+      "Trips": 179,
+      "OTIF": 0.0,
+      "MedianKm": 69.5,
+      "Feasible": 0.8547486033519553,
+      "TopCustomer": "Larsen & Toubro Limited"
+    },
+    {
+      "BookingMonth": "2020-01",
+      "Trips": 358,
+      "OTIF": 0.0111731843575419,
+      "MedianKm": 90.0,
+      "Feasible": 0.9106145251396648,
+      "TopCustomer": "Larsen & Toubro Limited"
+    },
+    {
+      "BookingMonth": "2020-02",
+      "Trips": 68,
+      "OTIF": 0.0,
+      "MedianKm": 75.75,
+      "Feasible": 0.8235294117647058,
+      "TopCustomer": "Larsen & Toubro Limited"
+    },
+    {
+      "BookingMonth": "2020-03",
+      "Trips": 44,
+      "OTIF": 0.0,
+      "MedianKm": 65.0,
+      "Feasible": 0.9545454545454546,
+      "TopCustomer": "Larsen & Toubro Limited"
+    },
+    {
+      "BookingMonth": "2020-05",
+      "Trips": 55,
+      "OTIF": 0.0,
+      "MedianKm": 109.0,
+      "Feasible": 0.8727272727272727,
+      "TopCustomer": "Larsen & Toubro Limited"
+    },
+    {
+      "BookingMonth": "2020-06",
+      "Trips": 496,
+      "OTIF": 0.23387096774193547,
+      "MedianKm": 1290.0,
+      "Feasible": 0.2842741935483871,
+      "TopCustomer": "Ford India Private Limited"
+    },
+    {
+      "BookingMonth": "2020-07",
+      "Trips": 942,
+      "OTIF": 0.31210191082802546,
+      "MedianKm": 1290.0,
+      "Feasible": 0.28450106157112526,
+      "TopCustomer": "Ford India Private Limited"
+    },
+    {
+      "BookingMonth": "2020-08",
+      "Trips": 1429,
+      "OTIF": 0.6717984604618614,
+      "MedianKm": 310.0,
+      "Feasible": 0.6850944716585025,
+      "TopCustomer": "Daimler India Commercial Vehicles Pvt Ltd"
+    }
+  ],
+  "zone": [
+    {
+      "DestinationZone": "North-East",
+      "Trips": 105,
+      "OTIF": 0.21904761904761905,
+      "MedianLeadDays": 9.43,
+      "MedianKm": 307.0,
+      "MedianDelayHrs": 127.7,
+      "Feasible": 0.6571428571428571
+    },
+    {
+      "DestinationZone": "North",
+      "Trips": 711,
+      "OTIF": 0.11814345991561181,
+      "MedianLeadDays": 6.91,
+      "MedianKm": 1775.0,
+      "MedianDelayHrs": 104.1,
+      "Feasible": 0.3136427566807314
+    },
+    {
+      "DestinationZone": "West",
+      "Trips": 607,
+      "OTIF": 0.3673805601317957,
+      "MedianLeadDays": 4.82,
+      "MedianKm": 1170.0,
+      "MedianDelayHrs": 27.9,
+      "Feasible": 0.40691927512355847
+    },
+    {
+      "DestinationZone": "East",
+      "Trips": 395,
+      "OTIF": 0.28607594936708863,
+      "MedianLeadDays": 4.77,
+      "MedianKm": 210.0,
+      "MedianDelayHrs": 43.4,
+      "Feasible": 0.8936708860759494
+    },
+    {
+      "DestinationZone": "South",
+      "Trips": 1757,
+      "OTIF": 0.5332953898690951,
+      "MedianLeadDays": 2.855,
+      "MedianKm": 310.0,
+      "MedianDelayHrs": -4.8,
+      "Feasible": 0.6391576550939101
+    }
+  ],
+  "routes": [
+    {
+      "Route": "Maharashtra \u2192 Assam",
+      "Trips": 26,
+      "OTIF": 0.0,
+      "MedianLeadDays": 12.46,
+      "MedianKm": 2750.0,
+      "MedianPlannedHrs": 100.0,
+      "Feasible": 0.0
+    },
+    {
+      "Route": "Tamil Nadu \u2192 Himachal Pradesh",
+      "Trips": 28,
+      "OTIF": 0.03571428571428571,
+      "MedianLeadDays": 9.280000000000001,
+      "MedianKm": 2600.0,
+      "MedianPlannedHrs": 100.0,
+      "Feasible": 0.0
+    },
+    {
+      "Route": "Maharashtra \u2192 Rajasthan",
+      "Trips": 73,
+      "OTIF": 0.0136986301369863,
+      "MedianLeadDays": 7.69,
+      "MedianKm": 1178.0,
+      "MedianPlannedHrs": 21.4,
+      "Feasible": 0.0
+    },
+    {
+      "Route": "Maharashtra \u2192 Andhra Pradesh",
+      "Trips": 28,
+      "OTIF": 0.0,
+      "MedianLeadDays": 7.58,
+      "MedianKm": 900.0,
+      "MedianPlannedHrs": 100.0,
+      "Feasible": 1.0
+    },
+    {
+      "Route": "Karnataka \u2192 Haryana",
+      "Trips": 36,
+      "OTIF": 0.19444444444444445,
+      "MedianLeadDays": 7.365,
+      "MedianKm": 2211.0,
+      "MedianPlannedHrs": 35.75,
+      "Feasible": 0.0
+    },
+    {
+      "Route": "Tamil Nadu \u2192 Haryana",
+      "Trips": 195,
+      "OTIF": 0.041025641025641026,
+      "MedianLeadDays": 7.16,
+      "MedianKm": 2300.0,
+      "MedianPlannedHrs": 100.0,
+      "Feasible": 0.0
+    },
+    {
+      "Route": "Uttar Pradesh \u2192 Uttar Pradesh",
+      "Trips": 84,
+      "OTIF": 0.08333333333333333,
+      "MedianLeadDays": 6.86,
+      "MedianKm": 68.5,
+      "MedianPlannedHrs": 15.4,
+      "Feasible": 0.9642857142857143
+    },
+    {
+      "Route": "Odisha \u2192 Odisha",
+      "Trips": 102,
+      "OTIF": 0.13725490196078433,
+      "MedianLeadDays": 6.25,
+      "MedianKm": 30.0,
+      "MedianPlannedHrs": 23.2,
+      "Feasible": 0.9411764705882353
+    },
+    {
+      "Route": "Tamil Nadu \u2192 Gujarat",
+      "Trips": 128,
+      "OTIF": 0.09375,
+      "MedianLeadDays": 6.075,
+      "MedianKm": 1900.0,
+      "MedianPlannedHrs": 100.0,
+      "Feasible": 0.0
+    },
+    {
+      "Route": "Assam \u2192 Assam",
+      "Trips": 68,
+      "OTIF": 0.29411764705882354,
+      "MedianLeadDays": 6.05,
+      "MedianKm": 241.0,
+      "MedianPlannedHrs": 28.3,
+      "Feasible": 0.9411764705882353
+    },
+    {
+      "Route": "Gujarat \u2192 Tamil Nadu",
+      "Trips": 144,
+      "OTIF": 0.10416666666666667,
+      "MedianLeadDays": 6.02,
+      "MedianKm": 1900.0,
+      "MedianPlannedHrs": 100.0,
+      "Feasible": 0.0
+    },
+    {
+      "Route": "Puducherry \u2192 Haryana",
+      "Trips": 33,
+      "OTIF": 0.18181818181818182,
+      "MedianLeadDays": 5.984999999999999,
+      "MedianKm": 2700.0,
+      "MedianPlannedHrs": 100.0,
+      "Feasible": 0.0
+    }
+  ],
+  "band": [
+    {
+      "DistanceBand": "< 100 km",
+      "Trips": 819,
+      "OTIF": 0.38461538461538464,
+      "MedianLeadDays": 2.85,
+      "MedianPlannedHrs": 7.6,
+      "RealisticHrs": 2.9,
+      "Feasible": 0.9267399267399268
+    },
+    {
+      "DistanceBand": "100-300 km",
+      "Trips": 714,
+      "OTIF": 0.6778711484593838,
+      "MedianLeadDays": 0.93,
+      "MedianPlannedHrs": 100.0,
+      "RealisticHrs": 17.0,
+      "Feasible": 0.9607843137254902
+    },
+    {
+      "DistanceBand": "300-700 km",
+      "Trips": 427,
+      "OTIF": 0.5409836065573771,
+      "MedianLeadDays": 3.005,
+      "MedianPlannedHrs": 100.0,
+      "RealisticHrs": 38.4,
+      "Feasible": 0.8079625292740047
+    },
+    {
+      "DistanceBand": "700-1,200 km",
+      "Trips": 522,
+      "OTIF": 0.33524904214559387,
+      "MedianLeadDays": 5.295,
+      "MedianPlannedHrs": 100.0,
+      "RealisticHrs": 101.3,
+      "Feasible": 0.4329501915708812
+    },
+    {
+      "DistanceBand": "1,200-2,000 km",
+      "Trips": 564,
+      "OTIF": 0.19326241134751773,
+      "MedianLeadDays": 5.96,
+      "MedianPlannedHrs": 100.0,
+      "RealisticHrs": 152.6,
+      "Feasible": 0.0
+    },
+    {
+      "DistanceBand": "> 2,000 km",
+      "Trips": 536,
+      "OTIF": 0.125,
+      "MedianLeadDays": 6.62,
+      "MedianPlannedHrs": 100.0,
+      "RealisticHrs": 232.8,
+      "Feasible": 0.0
+    }
+  ],
+  "feasible": [
+    {
+      "SLAFeasible": 0,
+      "Trips": 1566,
+      "OTIF": 0.16666666666666666
+    },
+    {
+      "SLAFeasible": 1,
+      "Trips": 2016,
+      "OTIF": 0.5555555555555556
+    }
+  ],
+  "carrier": [
+    {
+      "Carrier": "K M R Transport",
+      "Trips": 31,
+      "OTIF": 0.0,
+      "Expected": 0.43425559947299075,
+      "MedianKm": 65.0,
+      "MedianDelayHrs": 101.1,
+      "Customers": 1,
+      "VsExpected_pp": -43.42555994729908,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "A P R Trailler Service",
+      "Trips": 78,
+      "OTIF": 0.10256410256410256,
+      "Expected": 0.51270253211247,
+      "MedianKm": 66.0,
+      "MedianDelayHrs": 126.6,
+      "Customers": 1,
+      "VsExpected_pp": -41.01384295483675,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "K.Ramachandran Transports",
+      "Trips": 61,
+      "OTIF": 0.04918032786885246,
+      "Expected": 0.45590019572957013,
+      "MedianKm": 90.0,
+      "MedianDelayHrs": 107.3,
+      "Customers": 1,
+      "VsExpected_pp": -40.67198678607177,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "Shri Sai Enterprises",
+      "Trips": 32,
+      "OTIF": 0.0625,
+      "Expected": 0.4379413270107591,
+      "MedianKm": 65.0,
+      "MedianDelayHrs": 113.35,
+      "Customers": 1,
+      "VsExpected_pp": -37.54413270107591,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "Baba Lingaraj Enterprises Pvt Ltd",
+      "Trips": 78,
+      "OTIF": 0.1794871794871795,
+      "Expected": 0.512054681779507,
+      "MedianKm": 81.5,
+      "MedianDelayHrs": 72.0,
+      "Customers": 1,
+      "VsExpected_pp": -33.25675022923274,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "Sunita Carriers Private Limited",
+      "Trips": 160,
+      "OTIF": 0.16875,
+      "Expected": 0.49370699119792194,
+      "MedianKm": 210.0,
+      "MedianDelayHrs": 75.6,
+      "Customers": 1,
+      "VsExpected_pp": -32.49569911979219,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "S.B.Transport Company",
+      "Trips": 38,
+      "OTIF": 0.0,
+      "Expected": 0.29391165661188545,
+      "MedianKm": 25.0,
+      "MedianDelayHrs": 104.8,
+      "Customers": 1,
+      "VsExpected_pp": -29.391165661188545,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "Shri Ganesh Traders And Transporter",
+      "Trips": 75,
+      "OTIF": 0.3466666666666667,
+      "Expected": 0.6342525593723898,
+      "MedianKm": 161.0,
+      "MedianDelayHrs": 32.7,
+      "Customers": 1,
+      "VsExpected_pp": -28.75858927057231,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "Rajdhani Roadways",
+      "Trips": 64,
+      "OTIF": 0.0,
+      "Expected": 0.2449927071353268,
+      "MedianKm": 1267.0,
+      "MedianDelayHrs": 105.0,
+      "Customers": 1,
+      "VsExpected_pp": -24.49927071353268,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "As Logistics",
+      "Trips": 95,
+      "OTIF": 0.3473684210526316,
+      "Expected": 0.5729542663529882,
+      "MedianKm": 241.0,
+      "MedianDelayHrs": 27.65,
+      "Customers": 1,
+      "VsExpected_pp": -22.55858453003566,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "Pawan R Logistics",
+      "Trips": 45,
+      "OTIF": 0.022222222222222223,
+      "Expected": 0.19465987263859605,
+      "MedianKm": 1275.0,
+      "MedianDelayHrs": 195.9,
+      "Customers": 4,
+      "VsExpected_pp": -17.24376504163738,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "Sengar Road Lines",
+      "Trips": 45,
+      "OTIF": 0.4,
+      "Expected": 0.5660701919264475,
+      "MedianKm": 174.0,
+      "MedianDelayHrs": 0.1,
+      "Customers": 1,
+      "VsExpected_pp": -16.607019192644746,
+      "Verdict": "Exit / re-tender"
+    },
+    {
+      "Carrier": "Unknown Carrier",
+      "Trips": 217,
+      "OTIF": 0.1152073732718894,
+      "Expected": 0.2673871190476911,
+      "MedianKm": 925.0,
+      "MedianDelayHrs": 167.3,
+      "Customers": 11,
+      "VsExpected_pp": -15.217974577580168,
+      "Verdict": "Data gap - fix carrier capture"
+    },
+    {
+      "Carrier": "A S Transports",
+      "Trips": 48,
+      "OTIF": 0.22916666666666666,
+      "Expected": 0.3227149209486166,
+      "MedianKm": 17.25,
+      "MedianDelayHrs": 93.19999999999999,
+      "Customers": 1,
+      "VsExpected_pp": -9.354825428194994,
+      "Verdict": "Monitor"
+    },
+    {
+      "Carrier": "Distribution Logistics Infrastructure Private Ltd",
+      "Trips": 35,
+      "OTIF": 0.34285714285714286,
+      "Expected": 0.3970826275174101,
+      "MedianKm": 35.4,
+      "MedianDelayHrs": 30.099999999999998,
+      "Customers": 1,
+      "VsExpected_pp": -5.422548466026722,
+      "Verdict": "Monitor"
+    },
+    {
+      "Carrier": "Ekta Transport Company",
+      "Trips": 238,
+      "OTIF": 0.2184873949579832,
+      "Expected": 0.2512459635453051,
+      "MedianKm": 1900.0,
+      "MedianDelayHrs": 42.2,
+      "Customers": 8,
+      "VsExpected_pp": -3.2758568587321903,
+      "Verdict": "Monitor"
+    },
+    {
+      "Carrier": "Trans Cargo India",
+      "Trips": 198,
+      "OTIF": 0.13131313131313133,
+      "Expected": 0.14568110179812307,
+      "MedianKm": 2425.0,
+      "MedianDelayHrs": 48.2,
+      "Customers": 6,
+      "VsExpected_pp": -1.4367970484991748,
+      "Verdict": "Monitor"
+    },
+    {
+      "Carrier": "New Chennai Royal Transport",
+      "Trips": 31,
+      "OTIF": 0.3870967741935484,
+      "Expected": 0.37690417359586786,
+      "MedianKm": 680.0,
+      "MedianDelayHrs": 16.5,
+      "Customers": 6,
+      "VsExpected_pp": 1.0192600597680512,
+      "Verdict": "Monitor"
+    },
+    {
+      "Carrier": "Sree Sakthi Transport",
+      "Trips": 75,
+      "OTIF": 0.64,
+      "Expected": 0.5836374385408082,
+      "MedianKm": 215.0,
+      "MedianDelayHrs": -80.3,
+      "Customers": 5,
+      "VsExpected_pp": 5.636256145919183,
+      "Verdict": "Monitor"
+    },
+    {
+      "Carrier": "R.Sai Logistics India Pvt.Ltd",
+      "Trips": 54,
+      "OTIF": 0.18518518518518517,
+      "Expected": 0.125,
+      "MedianKm": 2400.0,
+      "MedianDelayHrs": 41.9,
+      "Customers": 4,
+      "VsExpected_pp": 6.018518518518517,
+      "Verdict": "Monitor"
+    },
+    {
+      "Carrier": "Ekta Travels",
+      "Trips": 53,
+      "OTIF": 0.5094339622641509,
+      "Expected": 0.4481769505354411,
+      "MedianKm": 1000.0,
+      "MedianDelayHrs": -0.05,
+      "Customers": 3,
+      "VsExpected_pp": 6.1257011728709845,
+      "Verdict": "Monitor"
+    },
+    {
+      "Carrier": "Krc Logistics",
+      "Trips": 177,
+      "OTIF": 0.3163841807909605,
+      "Expected": 0.23159715974161169,
+      "MedianKm": 1199.0,
+      "MedianDelayHrs": 32.5,
+      "Customers": 6,
+      "VsExpected_pp": 8.478702104934879,
+      "Verdict": "Monitor"
+    },
+    {
+      "Carrier": "Gayathri Transport",
+      "Trips": 34,
+      "OTIF": 0.8529411764705882,
+      "Expected": 0.6260869565217392,
+      "MedianKm": 400.0,
+      "MedianDelayHrs": -57.599999999999994,
+      "Customers": 1,
+      "VsExpected_pp": 22.6854219948849,
+      "Verdict": "Preferred - grow"
+    },
+    {
+      "Carrier": "Vj Logistics",
+      "Trips": 174,
+      "OTIF": 0.6206896551724138,
+      "Expected": 0.3619026289841059,
+      "MedianKm": 400.0,
+      "MedianDelayHrs": -29.3,
+      "Customers": 6,
+      "VsExpected_pp": 25.87870261883079,
+      "Verdict": "Preferred - grow"
+    },
+    {
+      "Carrier": "Kasam Transport Service",
+      "Trips": 44,
+      "OTIF": 0.9772727272727273,
+      "Expected": 0.679910990370174,
+      "MedianKm": 180.0,
+      "MedianDelayHrs": -98.2,
+      "Customers": 2,
+      "VsExpected_pp": 29.73617369025533,
+      "Verdict": "Preferred - grow"
+    },
+    {
+      "Carrier": "Sri Pachiamman Transport",
+      "Trips": 93,
+      "OTIF": 1.0,
+      "Expected": 0.6953352769679302,
+      "MedianKm": 110.0,
+      "MedianDelayHrs": -99.7,
+      "Customers": 1,
+      "VsExpected_pp": 30.46647230320698,
+      "Verdict": "Preferred - grow"
+    },
+    {
+      "Carrier": "Sr Transports",
+      "Trips": 113,
+      "OTIF": 1.0,
+      "Expected": 0.6928429492052864,
+      "MedianKm": 175.0,
+      "MedianDelayHrs": -90.2,
+      "Customers": 2,
+      "VsExpected_pp": 30.715705079471356,
+      "Verdict": "Preferred - grow"
+    },
+    {
+      "Carrier": "Arvinth Transport",
+      "Trips": 114,
+      "OTIF": 0.7631578947368421,
+      "Expected": 0.36077289139609103,
+      "MedianKm": 737.5,
+      "MedianDelayHrs": -45.15,
+      "Customers": 4,
+      "VsExpected_pp": 40.23850033407511,
+      "Verdict": "Preferred - grow"
+    },
+    {
+      "Carrier": "Susee Transporter",
+      "Trips": 42,
+      "OTIF": 1.0,
+      "Expected": 0.5003329475696062,
+      "MedianKm": 69.0,
+      "MedianDelayHrs": -79.4,
+      "Customers": 1,
+      "VsExpected_pp": 49.96670524303938,
+      "Verdict": "Preferred - grow"
+    },
+    {
+      "Carrier": "Eswar Transport",
+      "Trips": 43,
+      "OTIF": 0.9534883720930233,
+      "Expected": 0.45352820418543366,
+      "MedianKm": 70.0,
+      "MedianDelayHrs": -77.8,
+      "Customers": 1,
+      "VsExpected_pp": 49.996016790758965,
+      "Verdict": "Preferred - grow"
+    },
+    {
+      "Carrier": "Namakkal Sri Anjinaya Transport",
+      "Trips": 71,
+      "OTIF": 1.0,
+      "Expected": 0.4137022397891963,
+      "MedianKm": 20.0,
+      "MedianDelayHrs": -94.7,
+      "Customers": 1,
+      "VsExpected_pp": 58.629776021080374,
+      "Verdict": "Preferred - grow"
+    }
+  ],
+  "material": [
+    {
+      "MaterialCategory": "Unspecified",
+      "Trips": 14,
+      "OTIF": 0.07142857142857142,
+      "MedianKm": 1470.0,
+      "Feasible": 0.42857142857142855,
+      "Expected": 0.3289848471538638,
+      "VsExpected_pp": -25.75562757252924
+    },
+    {
+      "MaterialCategory": "General Auto Parts",
+      "Trips": 1234,
+      "OTIF": 0.32820097244732577,
+      "MedianKm": 601.0,
+      "Feasible": 0.5486223662884927,
+      "Expected": 0.3762081391447865,
+      "VsExpected_pp": -4.800716669746075
+    },
+    {
+      "MaterialCategory": "Electrical Components",
+      "Trips": 767,
+      "OTIF": 0.38070404172099087,
+      "MedianKm": 451.0,
+      "Feasible": 0.5488917861799217,
+      "Expected": 0.3798864827024178,
+      "VsExpected_pp": 0.08175590185730552
+    },
+    {
+      "MaterialCategory": "Returnable Packaging (Empty)",
+      "Trips": 378,
+      "OTIF": 0.40476190476190477,
+      "MedianKm": 585.0,
+      "Feasible": 0.5582010582010583,
+      "Expected": 0.3866141602068393,
+      "VsExpected_pp": 1.814774455506546
+    },
+    {
+      "MaterialCategory": "Other Industrial",
+      "Trips": 582,
+      "OTIF": 0.4106529209621993,
+      "MedianKm": 386.0,
+      "Feasible": 0.5773195876288659,
+      "Expected": 0.38733220093569615,
+      "VsExpected_pp": 2.332072002650315
+    },
+    {
+      "MaterialCategory": "Mechanical / Drivetrain",
+      "Trips": 607,
+      "OTIF": 0.4794069192751236,
+      "MedianKm": 370.0,
+      "Feasible": 0.6013179571663921,
+      "Expected": 0.410564979735856,
+      "VsExpected_pp": 6.88419395392676
+    }
+  ],
+  "material_test": {
+    "chi2": 47.74761895522431,
+    "p": 3.9992023420014595e-09,
+    "cramers_v": 0.11545508595086627,
+    "sla_cramers_v": 0.395754459563042
+  },
+  "util": {
+    "Empty-return trips (share)": 0.10552763819095477,
+    "Empty-return trips (count)": 378.0,
+    "Trailer (25-35 MT) trips < 100 km (share of trailer trips)": 0.5497881355932204,
+    "Est. spend on empty-return trips (INR M)": 13.372982
+  },
+  "vehicle": [
+    {
+      "VehicleClass": "Container",
+      "Trips": 123,
+      "MedianKm": 325.0,
+      "EmptyShare": 0.10569105691056911,
+      "OTIF": 0.22764227642276422,
+      "TopCustomer": "Ericsson India Private Limited"
+    },
+    {
+      "VehicleClass": "HCV (10-24 MT)",
+      "Trips": 1053,
+      "MedianKm": 1851.0,
+      "EmptyShare": 0.11016144349477683,
+      "OTIF": 0.2345679012345679,
+      "TopCustomer": "Ford India Private Limited"
+    },
+    {
+      "VehicleClass": "LCV (< 5 MT)",
+      "Trips": 75,
+      "MedianKm": 400.0,
+      "EmptyShare": 0.12,
+      "OTIF": 0.7733333333333333,
+      "TopCustomer": "Ashok Leyland Limited"
+    },
+    {
+      "VehicleClass": "MCV (5-9 MT)",
+      "Trips": 626,
+      "MedianKm": 1279.5,
+      "EmptyShare": 0.10862619808306709,
+      "OTIF": 0.17252396166134185,
+      "TopCustomer": "Ford India Private Limited"
+    },
+    {
+      "VehicleClass": "Trailer (25-35 MT)",
+      "Trips": 944,
+      "MedianKm": 88.8,
+      "EmptyShare": 0.0847457627118644,
+      "OTIF": 0.2097457627118644,
+      "TopCustomer": "Larsen & Toubro Limited"
+    },
+    {
+      "VehicleClass": "Unknown",
+      "Trips": 761,
+      "MedianKm": 110.0,
+      "EmptyShare": 0.12089356110381078,
+      "OTIF": 0.9750328515111695,
+      "TopCustomer": "Daimler India Commercial Vehicles Pvt Ltd"
+    }
+  ],
+  "anomaly": [
+    {
+      "AnomalyType": "Normal",
+      "Trips": 2724,
+      "Share": 0.7604690117252931
+    },
+    {
+      "AnomalyType": "Route shorter than straight line (impossible)",
+      "Trips": 418,
+      "Share": 0.11669458403126745
+    },
+    {
+      "AnomalyType": "Round trip (origin = destination)",
+      "Trips": 235,
+      "Share": 0.06560580681183696
+    },
+    {
+      "AnomalyType": "Route > 2.5x straight line (detour)",
+      "Trips": 205,
+      "Share": 0.057230597431602456
+    }
+  ],
+  "weekday": [
+    {
+      "BookingWeekday": "Monday",
+      "Trips": 663,
+      "OTIF": 0.46003016591251883,
+      "MedianKm": 282.0,
+      "LongHaulShare": 0.2368024132730015,
+      "Feasible": 0.6711915535444947,
+      "Expected": 0.4262068201683433,
+      "VsExpected_pp": 3.38233457441755
+    },
+    {
+      "BookingWeekday": "Tuesday",
+      "Trips": 677,
+      "OTIF": 0.3825701624815362,
+      "MedianKm": 530.0,
+      "LongHaulShare": 0.276218611521418,
+      "Feasible": 0.5716395864106352,
+      "Expected": 0.39035557536368204,
+      "VsExpected_pp": -0.7785412882145848
+    },
+    {
+      "BookingWeekday": "Wednesday",
+      "Trips": 623,
+      "OTIF": 0.3739967897271268,
+      "MedianKm": 400.0,
+      "LongHaulShare": 0.33386837881219905,
+      "Feasible": 0.5521669341894061,
+      "Expected": 0.3768288357662318,
+      "VsExpected_pp": -0.2832046039104974
+    },
+    {
+      "BookingWeekday": "Thursday",
+      "Trips": 650,
+      "OTIF": 0.3830769230769231,
+      "MedianKm": 481.0,
+      "LongHaulShare": 0.31846153846153846,
+      "Feasible": 0.5692307692307692,
+      "Expected": 0.3898139691681904,
+      "VsExpected_pp": -0.6737046091267296
+    },
+    {
+      "BookingWeekday": "Friday",
+      "Trips": 563,
+      "OTIF": 0.3907637655417407,
+      "MedianKm": 601.0,
+      "LongHaulShare": 0.3463587921847247,
+      "Feasible": 0.5150976909413855,
+      "Expected": 0.37242844838243744,
+      "VsExpected_pp": 1.8335317159303255
+    },
+    {
+      "BookingWeekday": "Saturday",
+      "Trips": 342,
+      "OTIF": 0.29239766081871343,
+      "MedianKm": 1082.5,
+      "LongHaulShare": 0.38596491228070173,
+      "Feasible": 0.4239766081871345,
+      "Expected": 0.32256190625224035,
+      "VsExpected_pp": -3.0164245433526915
+    },
+    {
+      "BookingWeekday": "Sunday",
+      "Trips": 64,
+      "OTIF": 0.234375,
+      "MedianKm": 900.0,
+      "LongHaulShare": 0.21875,
+      "Feasible": 0.546875,
+      "Expected": 0.4065206357486099,
+      "VsExpected_pp": -17.214563574860993
+    }
+  ],
+  "cost": [
+    {
+      "DestinationZone": "North",
+      "Trips": 711,
+      "SpendINR_M": 41.478362,
+      "CostPerTrip": 58338.06188466948,
+      "CostPerTonne": 5628.0,
+      "CostPerTonneKm": 3.0,
+      "MedianKm": 1775.0,
+      "OTIF": 0.11814345991561181
+    },
+    {
+      "DestinationZone": "West",
+      "Trips": 607,
+      "SpendINR_M": 23.898427,
+      "CostPerTrip": 39371.37891268534,
+      "CostPerTonne": 3597.0,
+      "CostPerTonneKm": 3.0,
+      "MedianKm": 1170.0,
+      "OTIF": 0.3673805601317957
+    },
+    {
+      "DestinationZone": "South",
+      "Trips": 1757,
+      "SpendINR_M": 48.451733,
+      "CostPerTrip": 27576.398975526467,
+      "CostPerTonne": 1095.0,
+      "CostPerTonneKm": 3.0,
+      "MedianKm": 310.0,
+      "OTIF": 0.5332953898690951
+    },
+    {
+      "DestinationZone": "North-East",
+      "Trips": 105,
+      "SpendINR_M": 3.641283,
+      "CostPerTrip": 34678.885714285716,
+      "CostPerTonne": 607.0,
+      "CostPerTonneKm": 2.15,
+      "MedianKm": 307.0,
+      "OTIF": 0.21904761904761905
+    },
+    {
+      "DestinationZone": "East",
+      "Trips": 395,
+      "SpendINR_M": 5.278465,
+      "CostPerTrip": 13363.20253164557,
+      "CostPerTonne": 368.0,
+      "CostPerTonneKm": 2.15,
+      "MedianKm": 210.0,
+      "OTIF": 0.28607594936708863
+    }
+  ],
+  "states": [
+    {
+      "DestinationState": "Tamil Nadu",
+      "Trips": 1240,
+      "OTIF": 0.5508064516129032,
+      "Carriers": 85,
+      "TopCarrierShare": 0.10403225806451613,
+      "MedianKm": 560.0,
+      "Feasible": 0.5491935483870968,
+      "Lat": 12.839,
+      "Lon": 79.954,
+      "Quadrant": "Core - healthy",
+      "Prescription": "-"
+    },
+    {
+      "DestinationState": "Haryana",
+      "Trips": 372,
+      "OTIF": 0.12903225806451613,
+      "Carriers": 42,
+      "TopCarrierShare": 0.260752688172043,
+      "MedianKm": 2240.0,
+      "Feasible": 0.21236559139784947,
+      "Lat": 28.373519,
+      "Lon": 76.835337,
+      "Quadrant": "Breaking point",
+      "Prescription": "Fix SLA / consider regional hub (long-haul, infeasible plans)"
+    },
+    {
+      "DestinationState": "Gujarat",
+      "Trips": 329,
+      "OTIF": 0.43465045592705165,
+      "Carriers": 27,
+      "TopCarrierShare": 0.19148936170212766,
+      "MedianKm": 1000.0,
+      "Feasible": 0.5592705167173252,
+      "Lat": 22.961777,
+      "Lon": 72.094219,
+      "Quadrant": "Core - healthy",
+      "Prescription": "-"
+    },
+    {
+      "DestinationState": "Maharashtra",
+      "Trips": 277,
+      "OTIF": 0.2888086642599278,
+      "Carriers": 37,
+      "TopCarrierShare": 0.3104693140794224,
+      "MedianKm": 1199.0,
+      "Feasible": 0.22743682310469315,
+      "Lat": 18.750621,
+      "Lon": 73.87719,
+      "Quadrant": "Breaking point",
+      "Prescription": "Fix SLA / consider regional hub (long-haul, infeasible plans)"
+    },
+    {
+      "DestinationState": "Karnataka",
+      "Trips": 257,
+      "OTIF": 0.603112840466926,
+      "Carriers": 29,
+      "TopCarrierShare": 0.36186770428015563,
+      "MedianKm": 110.0,
+      "Feasible": 0.867704280155642,
+      "Lat": 12.751,
+      "Lon": 77.7630264028446,
+      "Quadrant": "Core - healthy",
+      "Prescription": "-"
+    },
+    {
+      "DestinationState": "West Bengal",
+      "Trips": 175,
+      "OTIF": 0.3028571428571429,
+      "Carriers": 8,
+      "TopCarrierShare": 0.5657142857142857,
+      "MedianKm": 214.0,
+      "Feasible": 0.9028571428571428,
+      "Lat": 22.9521023742981,
+      "Lon": 88.4570147960761,
+      "Quadrant": "Breaking point",
+      "Prescription": "Change / dual-source carrier"
+    },
+    {
+      "DestinationState": "Rajasthan",
+      "Trips": 126,
+      "OTIF": 0.20634920634920634,
+      "Carriers": 27,
+      "TopCarrierShare": 0.16666666666666666,
+      "MedianKm": 1178.0,
+      "Feasible": 0.2777777777777778,
+      "Lat": 27.236458,
+      "Lon": 75.91729,
+      "Quadrant": "Breaking point",
+      "Prescription": "Fix SLA / consider regional hub (long-haul, infeasible plans)"
+    },
+    {
+      "DestinationState": "Odisha",
+      "Trips": 123,
+      "OTIF": 0.17073170731707318,
+      "Carriers": 8,
+      "TopCarrierShare": 0.6341463414634146,
+      "MedianKm": 109.0,
+      "Feasible": 0.8861788617886179,
+      "Lat": 22.2000686954292,
+      "Lon": 84.679293,
+      "Quadrant": "Breaking point",
+      "Prescription": "Change / dual-source carrier"
+    },
+    {
+      "DestinationState": "Telangana",
+      "Trips": 113,
+      "OTIF": 0.1415929203539823,
+      "Carriers": 11,
+      "TopCarrierShare": 0.3893805309734513,
+      "MedianKm": 65.0,
+      "Feasible": 0.8053097345132744,
+      "Lat": 17.556417,
+      "Lon": 78.207737,
+      "Quadrant": "Low volume - weak",
+      "Prescription": "-"
+    },
+    {
+      "DestinationState": "Uttar Pradesh",
+      "Trips": 99,
+      "OTIF": 0.0707070707070707,
+      "Carriers": 11,
+      "TopCarrierShare": 0.7676767676767676,
+      "MedianKm": 88.0,
+      "Feasible": 0.8383838383838383,
+      "Lat": 28.553524,
+      "Lon": 77.733763,
+      "Quadrant": "Low volume - weak",
+      "Prescription": "-"
+    },
+    {
+      "DestinationState": "Assam",
+      "Trips": 97,
+      "OTIF": 0.20618556701030927,
+      "Carriers": 10,
+      "TopCarrierShare": 0.7010309278350515,
+      "MedianKm": 371.0,
+      "Feasible": 0.6701030927835051,
+      "Lat": 26.655095,
+      "Lon": 91.749014,
+      "Quadrant": "Low volume - weak",
+      "Prescription": "-"
+    },
+    {
+      "DestinationState": "Jharkhand",
+      "Trips": 82,
+      "OTIF": 0.4024390243902439,
+      "Carriers": 7,
+      "TopCarrierShare": 0.7317073170731707,
+      "MedianKm": 222.5,
+      "Feasible": 0.8902439024390244,
+      "Lat": 23.530626,
+      "Lon": 85.458186,
+      "Quadrant": "Low volume - healthy",
+      "Prescription": "-"
+    },
+    {
+      "DestinationState": "Puducherry",
+      "Trips": 82,
+      "OTIF": 0.9878048780487805,
+      "Carriers": 4,
+      "TopCarrierShare": 0.8536585365853658,
+      "MedianKm": 240.0,
+      "Feasible": 0.9878048780487805,
+      "Lat": 11.872,
+      "Lon": 79.632,
+      "Quadrant": "Low volume - healthy",
+      "Prescription": "-"
+    },
+    {
+      "DestinationState": "Andhra Pradesh",
+      "Trips": 62,
+      "OTIF": 0.03225806451612903,
+      "Carriers": 9,
+      "TopCarrierShare": 0.22580645161290322,
+      "MedianKm": 690.0,
+      "Feasible": 0.7258064516129032,
+      "Lat": 16.184556,
+      "Lon": 80.332451,
+      "Quadrant": "Low volume - weak",
+      "Prescription": "-"
+    },
+    {
+      "DestinationState": "Delhi",
+      "Trips": 53,
+      "OTIF": 0.0,
+      "Carriers": 10,
+      "TopCarrierShare": 0.6981132075471698,
+      "MedianKm": 34.0,
+      "Feasible": 0.4716981132075472,
+      "Lat": 28.578231,
+      "Lon": 77.090981,
+      "Quadrant": "Low volume - weak",
+      "Prescription": "-"
+    },
+    {
+      "DestinationState": "Himachal Pradesh",
+      "Trips": 44,
+      "OTIF": 0.06818181818181818,
+      "Carriers": 10,
+      "TopCarrierShare": 0.38636363636363635,
+      "MedianKm": 2571.5,
+      "Feasible": 0.022727272727272728,
+      "Lat": 31.045961,
+      "Lon": 76.664373,
+      "Quadrant": "Low volume - weak",
+      "Prescription": "-"
+    }
+  ],
+  "rules": [
+    {
+      "Rule": "R1 Infeasible SLA (planned speed > 10.4 km/h)",
+      "Weight": 3,
+      "Trips flagged (test)": 456,
+      "Late rate when flagged": 0.7192982456140351,
+      "Late rate otherwise": 0.14402451481103162
+    },
+    {
+      "Rule": "R2 Long haul (> 1,200 km)",
+      "Weight": 1,
+      "Trips flagged (test)": 332,
+      "Late rate when flagged": 0.7048192771084337,
+      "Late rate otherwise": 0.2130553037171351
+    },
+    {
+      "Rule": "R3 Carrier with weak history (< 25% on-time)",
+      "Weight": 2,
+      "Trips flagged (test)": 360,
+      "Late rate when flagged": 0.7083333333333333,
+      "Late rate otherwise": 0.19906976744186045
+    },
+    {
+      "Rule": "R4 Customer lane with weak history (< 25% on-time)",
+      "Weight": 1,
+      "Trips flagged (test)": 614,
+      "Late rate when flagged": 0.5879478827361564,
+      "Late rate otherwise": 0.13154689403166875
+    }
+  ],
+  "risk_bands_test": [
+    {
+      "RiskBand": "Low (0)",
+      "Trips": 678,
+      "LateRate": 0.06047197640117996
+    },
+    {
+      "RiskBand": "Medium (1-2)",
+      "Trips": 226,
+      "LateRate": 0.1991150442477876
+    },
+    {
+      "RiskBand": "High (3-4)",
+      "Trips": 197,
+      "LateRate": 0.6548223350253808
+    },
+    {
+      "RiskBand": "Critical (5+)",
+      "Trips": 334,
+      "LateRate": 0.7604790419161677
+    }
+  ],
+  "scenario": [
+    {
+      "Lever": "1. Distance-based SLA (250 km/day rule)",
+      "OTIF uplift (pp)": 15.561529271206693
+    },
+    {
+      "Lever": "2. Re-tender / exit weakest carriers",
+      "OTIF uplift (pp)": 6.847871737368931
+    },
+    {
+      "Lever": "3. Booking-time early warning (10% recovery)",
+      "OTIF uplift (pp)": 4.96929089893914
+    }
+  ],
+  "base_otif": 0.38553880513679506
+}

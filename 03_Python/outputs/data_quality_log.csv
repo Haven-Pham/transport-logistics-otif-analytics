@@ -1,0 +1,25 @@
+Check,Result,Rows affected,Action
+Column naming,Typo 'Curren Location Longitude'; names differ from dictionary,,Rename to clean PascalCase names
+Mixed types in date columns,datetime + str + float in the same column,8.0,pd.to_datetime(errors='coerce')
+Placeholder dates (1899-12-30),Excel zero-date used as 'blank',8.0,Set to NaT
+Placeholder carrier 'Unknown',Carrier not recorded,217.0,Keep as 'Unknown carrier' (own category)
+Placeholder material 'Xxxxxx',Material not recorded,14.0,Map to 'Unspecified'
+Missing: Minimum Kms To Be Covered In A Day,2645 (74%),2645.0,Constant 250 km/day policy → used as SLA benchmark
+Missing: Driver Mobile No,1024 (29%),1024.0,"Dropped (PII, not needed)"
+Missing: Vehicle Type,764 (21%),764.0,Map to 'Unknown' class
+Missing: Driver Name,317 (9%),317.0,"Dropped (PII, not needed)"
+Missing: Transportation Distance (KM),148 (4%),148.0,Impute = straight-line × median road factor (flagged)
+Missing: Actual ETA,25 (1%),25.0,Excluded from lead-time stats (Ontime flag kept)
+Missing: Data Ping time,1 (0%),1.0,Leave as missing
+Missing: Curren Location Longitude,1 (0%),1.0,Leave as missing
+Missing: Current Location Latitude,1 (0%),1.0,Leave as missing
+Duplicate Booking ID,"3 extra rows on 2 bookings (same truck & times, different material lines)",3.0,Keep first row per booking (trip grain)
+Inconsistent text: Origin Location,152 → 124 distinct after normalising,28.0,"Title-case, trim, standardise separators"
+Inconsistent text: Destination Location,353 → 353 distinct after normalising,0.0,"Title-case, trim, standardise separators"
+Coordinates outside India bounding box,0 rows,0.0,None needed
+Distance = 0 km,18 rows,18.0,Impute from coordinates (flagged)
+Negative lead time (Actual ETA < Booking),9 rows,9.0,"Flag invalid, exclude from lead-time stats"
+Lead time > 30 days,200 rows (stale GPS / late closure),200.0,"Flag invalid, exclude from lead-time stats"
+Ontime flag vs Actual<=Planned ETA,1 conflicts (99.7% agree),1.0,Keep source flag as the business definition
+In-Full information,No ordered vs delivered quantity in the data,,OTIF measured as On-Time only (documented assumption)
+Freight cost & shipment weight,Not in the data,,Modelled proxies: rate card by vehicle class; capacity from vehicle type

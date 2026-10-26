@@ -1,0 +1,502 @@
+/// Trip fact: one row per booking (3,582) with OTIF, lead time, SLA feasibility, GPS anomaly, risk score and modelled cost.
+table fact_trips
+	lineageTag: 12f44d58-7ec7-4bd2-996b-5fde7b833097
+
+	column BookingID
+		dataType: string
+		lineageTag: 4c3791fd-1bf8-43d1-895c-6bd51d48033a
+		summarizeBy: none
+		sourceColumn: BookingID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BookingDay
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 6c91f316-d4c8-4d8b-bc78-8e8b3af0ae20
+		summarizeBy: none
+		sourceColumn: BookingDay
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column BookingDateTime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 59257c1b-2f49-480b-8c91-2f0157f885b2
+		summarizeBy: none
+		sourceColumn: BookingDateTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column PlannedETA
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c5ec23a1-4e50-4704-b395-f6ba1ba46dcf
+		summarizeBy: none
+		sourceColumn: PlannedETA
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualETA
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f34d9858-43e0-4727-a0a2-aca871e5a94a
+		summarizeBy: none
+		sourceColumn: ActualETA
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipmentType
+		dataType: string
+		lineageTag: 1fd43887-9cf7-48c1-a2e4-2f047a88064c
+		summarizeBy: none
+		sourceColumn: ShipmentType
+
+		annotation SummarizationSetBy = Automatic
+
+	column GpsProvider
+		dataType: string
+		lineageTag: d3c69694-3958-4b5c-8a9d-694483babd25
+		summarizeBy: none
+		sourceColumn: GpsProvider
+
+		annotation SummarizationSetBy = Automatic
+
+	column VehicleReg
+		dataType: string
+		lineageTag: 88f7f224-07cc-491c-a37e-0c5f7b7c29e5
+		summarizeBy: none
+		sourceColumn: VehicleReg
+
+		annotation SummarizationSetBy = Automatic
+
+	column CarrierKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1e60777a-ce80-4652-96dd-99600f1cd2ef
+		summarizeBy: sum
+		sourceColumn: CarrierKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f95be59f-8b8c-4d60-8ec5-d51f32580327
+		summarizeBy: sum
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column VehicleClass
+		dataType: string
+		lineageTag: 7bf05463-5926-4269-b041-3d4c3348a374
+		summarizeBy: none
+		sourceColumn: VehicleClass
+
+		annotation SummarizationSetBy = Automatic
+
+	column VehicleType
+		dataType: string
+		lineageTag: 3949c1ec-79f3-43f4-a7bd-dbb70a2a4f5e
+		summarizeBy: none
+		sourceColumn: VehicleType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacityUsedMT
+		dataType: double
+		lineageTag: ed832456-c95e-471d-bb84-2eabfc88993e
+		summarizeBy: none
+		sourceColumn: CapacityUsedMT
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaterialCategory
+		dataType: string
+		lineageTag: 550cf755-ae1b-4d65-8e7f-469502a202c2
+		summarizeBy: none
+		sourceColumn: MaterialCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Material
+		dataType: string
+		lineageTag: cbe579d4-fd20-4467-adbd-f78dca6dba50
+		summarizeBy: none
+		sourceColumn: Material
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsEmptyReturn
+		dataType: int64
+		formatString: 0
+		lineageTag: b43f9e23-c0f9-4fee-b5ed-fbf24d80696f
+		summarizeBy: none
+		sourceColumn: IsEmptyReturn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Origin
+		dataType: string
+		lineageTag: dbb6af9c-8331-4718-b05e-3b4ab3018dd7
+		summarizeBy: none
+		sourceColumn: Origin
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginCity
+		dataType: string
+		lineageTag: d4538d75-6e99-4819-b575-0d9f47c91efe
+		summarizeBy: none
+		sourceColumn: OriginCity
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginState
+		dataType: string
+		lineageTag: 28ed7efc-6503-4add-b22b-336407e1b7fd
+		summarizeBy: none
+		sourceColumn: OriginState
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginZone
+		dataType: string
+		lineageTag: 72de2e61-de21-4187-a4b0-2624b2c90c73
+		summarizeBy: none
+		sourceColumn: OriginZone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Destination
+		dataType: string
+		lineageTag: 4c828a7b-5ca7-4a0b-afd5-2f1af5e2708e
+		summarizeBy: none
+		sourceColumn: Destination
+
+		annotation SummarizationSetBy = Automatic
+
+	column DestinationCity
+		dataType: string
+		lineageTag: bcad9f1a-ab02-43cb-97e0-188f9717019a
+		summarizeBy: none
+		sourceColumn: DestinationCity
+
+		annotation SummarizationSetBy = Automatic
+
+	column DestinationState
+		dataType: string
+		lineageTag: 38091df4-cd43-4d82-ab2d-72330f2459bc
+		summarizeBy: none
+		sourceColumn: DestinationState
+
+		annotation SummarizationSetBy = Automatic
+
+	column DestinationZone
+		dataType: string
+		lineageTag: ad46930c-0268-4943-bc25-a53b961071f4
+		summarizeBy: none
+		sourceColumn: DestinationZone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Route
+		dataType: string
+		lineageTag: 1351c2f1-c571-4032-ae92-0d80c5fb35f7
+		summarizeBy: none
+		sourceColumn: Route
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lane
+		dataType: string
+		lineageTag: f81e77aa-ac57-4901-8c2b-d5ad37c0f03f
+		summarizeBy: none
+		sourceColumn: Lane
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginLat
+		dataType: double
+		lineageTag: f4c332d2-162e-4e8d-8272-1fa512c2a3b6
+		summarizeBy: none
+		sourceColumn: OriginLat
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginLon
+		dataType: double
+		lineageTag: beccfe9d-bbc5-4fd1-a5a9-0fdd54c63bff
+		summarizeBy: none
+		sourceColumn: OriginLon
+
+		annotation SummarizationSetBy = Automatic
+
+	column DestLat
+		dataType: double
+		lineageTag: 89647e95-7c14-4a84-8851-56dff96850e8
+		summarizeBy: none
+		sourceColumn: DestLat
+
+		annotation SummarizationSetBy = Automatic
+
+	column DestLon
+		dataType: double
+		lineageTag: 7e8ab11c-6508-4b6f-a737-4c79e90e10da
+		summarizeBy: none
+		sourceColumn: DestLon
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentLat
+		dataType: double
+		lineageTag: bb9348b1-8766-4ddd-8ff9-f09eaa8cf315
+		summarizeBy: none
+		sourceColumn: CurrentLat
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentLon
+		dataType: double
+		lineageTag: f1cd023e-30c1-44ec-85cb-576206e29cf0
+		summarizeBy: none
+		sourceColumn: CurrentLon
+
+		annotation SummarizationSetBy = Automatic
+
+	column DistanceKm
+		dataType: double
+		formatString: #,0
+		lineageTag: 370b41ef-2123-4cf1-91dd-f059b04b4806
+		summarizeBy: sum
+		sourceColumn: DistanceKm
+
+		annotation SummarizationSetBy = Automatic
+
+	column DistanceImputed
+		dataType: int64
+		formatString: 0
+		lineageTag: b362c51e-cf12-4614-a22c-48e3cdefd08b
+		summarizeBy: none
+		sourceColumn: DistanceImputed
+
+		annotation SummarizationSetBy = Automatic
+
+	column DistanceBand
+		dataType: string
+		lineageTag: bff5fa5e-365b-4855-b290-8df1daec9435
+		summarizeBy: none
+		sourceColumn: DistanceBand
+		sortByColumn: DistanceBandNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column DistanceBandNo
+		dataType: int64
+		formatString: 0
+		lineageTag: b7b1a5ae-08d4-4f4a-b89d-fee90eaf87ac
+		summarizeBy: none
+		sourceColumn: DistanceBandNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column CrowKm
+		dataType: double
+		lineageTag: 87f59a4b-19cb-4426-9e16-5f3ede0de9a0
+		summarizeBy: sum
+		sourceColumn: CrowKm
+
+		annotation SummarizationSetBy = Automatic
+
+	column RouteToCrowRatio
+		dataType: double
+		lineageTag: b787fdd6-6887-4e73-9564-3299fb391db2
+		summarizeBy: none
+		sourceColumn: RouteToCrowRatio
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnomalyType
+		dataType: string
+		lineageTag: b70658a3-80de-4def-a247-a908e6be1ab6
+		summarizeBy: none
+		sourceColumn: AnomalyType
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsOnTime
+		dataType: int64
+		formatString: 0
+		lineageTag: dd72f7dc-bcda-4927-8e5d-c0f53a8ce538
+		summarizeBy: none
+		sourceColumn: IsOnTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column OnTimeStatus
+		dataType: string
+		lineageTag: d61038c5-2559-4dd6-a27c-c44a7dd6f0af
+		summarizeBy: none
+		sourceColumn: OnTimeStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLAStatus
+		dataType: string
+		lineageTag: 8135239b-01b3-47bb-8961-0f90b1602faa
+		summarizeBy: none
+		sourceColumn: SLAStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskBandNo
+		dataType: int64
+		formatString: 0
+		lineageTag: d6dbd3c7-33a0-4fa5-af5b-86aaf9dc5e79
+		summarizeBy: none
+		sourceColumn: RiskBandNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column PlannedTransitHrs
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 3e785512-f265-493c-af9a-b595fa676eb4
+		summarizeBy: none
+		sourceColumn: PlannedTransitHrs
+
+		annotation SummarizationSetBy = Automatic
+
+	column RealisticTransitHrs
+		dataType: double
+		formatString: #,0.0
+		lineageTag: e55c814a-f9f6-409b-97e3-e7a2d0d27b4b
+		summarizeBy: none
+		sourceColumn: RealisticTransitHrs
+
+		annotation SummarizationSetBy = Automatic
+
+	column PlannedSpeedKmh
+		dataType: double
+		lineageTag: 7391564a-850e-40e3-a99a-2cae2927a53b
+		summarizeBy: none
+		sourceColumn: PlannedSpeedKmh
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLAFeasible
+		dataType: int64
+		formatString: 0
+		lineageTag: 9396f66f-3d95-403b-8e55-74db7584a4a7
+		summarizeBy: none
+		sourceColumn: SLAFeasible
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeadTimeHrs
+		dataType: double
+		lineageTag: a71f56ff-81e3-43df-a8f8-a4b96cfc3193
+		summarizeBy: none
+		sourceColumn: LeadTimeHrs
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeadTimeDays
+		dataType: double
+		formatString: 0.0
+		lineageTag: 871323f8-e9ab-4e64-bae3-cb88541c0849
+		summarizeBy: none
+		sourceColumn: LeadTimeDays
+
+		annotation SummarizationSetBy = Automatic
+
+	column DelayHrs
+		dataType: double
+		formatString: #,0.0
+		lineageTag: b81fd024-3c19-4b44-9bfd-11cb9f1e91d8
+		summarizeBy: none
+		sourceColumn: DelayHrs
+
+		annotation SummarizationSetBy = Automatic
+
+	column ValidLeadTime
+		dataType: int64
+		formatString: 0
+		lineageTag: b9ad4bf9-e639-48e6-93d1-5c744d4c0686
+		summarizeBy: none
+		sourceColumn: ValidLeadTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExpectedOnTime
+		dataType: double
+		formatString: 0%
+		lineageTag: b8333267-d547-4c7c-a192-20496f893616
+		summarizeBy: none
+		sourceColumn: ExpectedOnTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskScore
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ad2c888-81c3-4ba4-8142-8cb566cd1d0f
+		summarizeBy: none
+		sourceColumn: RiskScore
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskBand
+		dataType: string
+		lineageTag: 113c4aaa-dccd-49da-b1b1-fa54d22f1cf0
+		summarizeBy: none
+		sourceColumn: RiskBand
+		sortByColumn: RiskBandNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstFreightCostINR
+		dataType: double
+		formatString: #,0
+		lineageTag: f6cdfd07-d8dc-4d5f-b804-61254906e34e
+		summarizeBy: sum
+		sourceColumn: EstFreightCostINR
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstCostPerTonneINR
+		dataType: double
+		formatString: #,0
+		lineageTag: 794b5193-848a-4048-aeca-f8f3f8a955ca
+		summarizeBy: none
+		sourceColumn: EstCostPerTonneINR
+
+		annotation SummarizationSetBy = Automatic
+
+	column RateInrPerKm
+		dataType: int64
+		formatString: 0
+		lineageTag: df3ba8d4-62cc-4bea-92ac-271f56a987c5
+		summarizeBy: none
+		sourceColumn: RateInrPerKm
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_trips = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "fact_trips.csv"), [Delimiter = ",", Columns = 57, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"BookingID", type text}, {"BookingDay", type date}, {"BookingDateTime", type datetime}, {"PlannedETA", type datetime}, {"ActualETA", type datetime}, {"ShipmentType", type text}, {"GpsProvider", type text}, {"VehicleReg", type text}, {"CarrierKey", Int64.Type}, {"CustomerKey", Int64.Type}, {"VehicleClass", type text}, {"VehicleType", type text}, {"CapacityUsedMT", type number}, {"MaterialCategory", type text}, {"Material", type text}, {"IsEmptyReturn", Int64.Type}, {"Origin", type text}, {"OriginCity", type text}, {"OriginState", type text}, {"OriginZone", type text}, {"Destination", type text}, {"DestinationCity", type text}, {"DestinationState", type text}, {"DestinationZone", type text}, {"Route", type text}, {"Lane", type text}, {"OriginLat", type number}, {"OriginLon", type number}, {"DestLat", type number}, {"DestLon", type number}, {"CurrentLat", type number}, {"CurrentLon", type number}, {"DistanceKm", type number}, {"DistanceImputed", Int64.Type}, {"DistanceBand", type text}, {"DistanceBandNo", Int64.Type}, {"CrowKm", type number}, {"RouteToCrowRatio", type number}, {"AnomalyType", type text}, {"IsOnTime", Int64.Type}, {"OnTimeStatus", type text}, {"SLAStatus", type text}, {"RiskBandNo", Int64.Type}, {"PlannedTransitHrs", type number}, {"RealisticTransitHrs", type number}, {"PlannedSpeedKmh", type number}, {"SLAFeasible", Int64.Type}, {"LeadTimeHrs", type number}, {"LeadTimeDays", type number}, {"DelayHrs", type number}, {"ValidLeadTime", Int64.Type}, {"ExpectedOnTime", type number}, {"RiskScore", Int64.Type}, {"RiskBand", type text}, {"EstFreightCostINR", type number}, {"EstCostPerTonneINR", type number}, {"RateInrPerKm", Int64.Type}}, "en-US")
+				in
+				    ChangedType
+
+	annotation PBI_ResultType = Table
+

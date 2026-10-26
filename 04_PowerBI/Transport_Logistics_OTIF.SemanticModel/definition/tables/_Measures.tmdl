@@ -1,0 +1,160 @@
+table _Measures
+	lineageTag: ea7aa131-8549-4e37-96c4-9ceed4c752f0
+
+	measure Trips = COUNTROWS ( fact_trips )
+		formatString: #,0
+		displayFolder: 1. Delivery (OTIF)
+		lineageTag: cd8d2b33-6410-49e5-ba99-5fb493844684
+
+	measure 'On-time Trips' = SUM ( fact_trips[IsOnTime] )
+		formatString: #,0
+		displayFolder: 1. Delivery (OTIF)
+		lineageTag: 1dcd0c23-f2cf-46de-bce8-371e88e69601
+
+	measure 'Late Trips' = [Trips] - [On-time Trips]
+		formatString: #,0
+		displayFolder: 1. Delivery (OTIF)
+		lineageTag: b48ff898-7622-4ba0-950b-82da2d450f0f
+
+	/// On-time share of trips (no in-full quantity in the data).
+	measure 'OTIF %' = DIVIDE ( [On-time Trips], [Trips] )
+		formatString: 0.0%
+		displayFolder: 1. Delivery (OTIF)
+		lineageTag: 299100f8-6b0c-41c0-950e-63df6992be5f
+
+	measure 'Late Rate %' = 1 - [OTIF %]
+		formatString: 0.0%
+		displayFolder: 1. Delivery (OTIF)
+		lineageTag: 0c5afd48-3381-43e9-a6eb-54bcb6a805e5
+
+	/// Baseline 38.6% + 5 pp next-quarter target.
+	measure 'OTIF Target (+5 pp)' = IF ( NOT ISBLANK ( [Trips] ), 0.436 )
+		formatString: 0.0%
+		displayFolder: 1. Delivery (OTIF)
+		lineageTag: 2ecd8924-f082-4f56-ad8c-e995f990a4ca
+
+	measure 'OTIF Color' = SWITCH ( TRUE (), [OTIF %] >= 0.6, "#16A34A", [OTIF %] >= 0.35, "#D97706", "#DC2626" )
+		displayFolder: 5. UI Helpers
+		lineageTag: e5be5cb8-7a92-4f21-8a35-550bea1bf20a
+
+	measure 'Avg Lead Time (Days)' = CALCULATE ( AVERAGE ( fact_trips[LeadTimeDays] ), fact_trips[ValidLeadTime] = 1 )
+		formatString: 0.0
+		displayFolder: 2. Lead time & SLA
+		lineageTag: 7cb3960b-bbbf-474b-bf2e-708696a90ec3
+
+	measure 'Median Lead Time (Days)' = CALCULATE ( MEDIAN ( fact_trips[LeadTimeDays] ), fact_trips[ValidLeadTime] = 1 )
+		formatString: 0.0
+		displayFolder: 2. Lead time & SLA
+		lineageTag: e1665134-febd-4998-8264-3f7e685d31b5
+
+	measure 'Median Delay of Late Trips (Hrs)' = CALCULATE ( MEDIAN ( fact_trips[DelayHrs] ), fact_trips[IsOnTime] = 0, fact_trips[ValidLeadTime] = 1 )
+		formatString: #,0
+		displayFolder: 2. Lead time & SLA
+		lineageTag: 98ca6b1f-f117-4bae-aedd-0dd88a7827ac
+
+	measure 'Avg Planned Transit (Hrs)' = AVERAGE ( fact_trips[PlannedTransitHrs] )
+		formatString: #,0
+		displayFolder: 2. Lead time & SLA
+		lineageTag: b48832f3-c1bd-42a8-b9e0-6b291180bbb2
+
+	/// Distance / 250 km per day (dataset policy).
+	measure 'Avg Realistic Transit (Hrs)' = AVERAGE ( fact_trips[RealisticTransitHrs] )
+		formatString: #,0
+		displayFolder: 2. Lead time & SLA
+		lineageTag: 55041205-3e13-4508-ab1a-03112d9f4550
+
+	/// Share of trips whose planned ETA implies > 250 km/day.
+	measure 'Infeasible SLA %' = 1 - AVERAGE ( fact_trips[SLAFeasible] )
+		formatString: 0.0%
+		displayFolder: 2. Lead time & SLA
+		lineageTag: de5c3bf1-b97f-4ac8-92cc-b11ec9b060be
+
+	measure 'Total Distance (km)' = SUM ( fact_trips[DistanceKm] )
+		formatString: #,0
+		displayFolder: 2. Lead time & SLA
+		lineageTag: a816a41b-95b7-4fbf-8699-842ffb71ad1f
+
+	/// Network on-time rate for the same distance band & SLA feasibility.
+	measure 'Expected OTIF %' = AVERAGE ( fact_trips[ExpectedOnTime] )
+		formatString: 0.0%
+		displayFolder: 3. Carrier benchmarking
+		lineageTag: febafce1-d80b-4345-a094-7d8f99d9a510
+
+	measure 'OTIF vs Expected (pp)' = ( [OTIF %] - [Expected OTIF %] ) * 100
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 3. Carrier benchmarking
+		lineageTag: 89c32ac2-20c2-4bbd-971d-47e08aa9004a
+
+	measure Carriers = DISTINCTCOUNT ( fact_trips[CarrierKey] )
+		formatString: #,0
+		displayFolder: 3. Carrier benchmarking
+		lineageTag: 4e72fbf7-6ab9-48e6-9396-161481ca6a64
+
+	measure 'Empty Return %' = AVERAGE ( fact_trips[IsEmptyReturn] )
+		formatString: 0.0%
+		displayFolder: 4. Utilisation, anomalies & cost
+		lineageTag: 7ed3f4d7-2206-4c41-8131-8d51a92abddd
+
+	measure 'GPS Anomaly %' = DIVIDE ( CALCULATE ( [Trips], fact_trips[AnomalyType] <> "Normal" ), [Trips] )
+		formatString: 0.0%
+		displayFolder: 4. Utilisation, anomalies & cost
+		lineageTag: ef31c855-e73c-4521-af5f-93e9065bde64
+
+	/// Share of bookings with early-warning score >= 3.
+	measure 'High-Risk Bookings %' = DIVIDE ( CALCULATE ( [Trips], fact_trips[RiskScore] >= 3 ), [Trips] )
+		formatString: 0.0%
+		displayFolder: 4. Utilisation, anomalies & cost
+		lineageTag: 35b17f57-fba5-4664-8cd2-605e3a73c0ef
+
+	/// Modelled: distance x assumed rate card.
+	measure 'Est. Freight Cost (INR M)' = DIVIDE ( SUM ( fact_trips[EstFreightCostINR] ), 1000000 )
+		formatString: #,0.0
+		displayFolder: 4. Utilisation, anomalies & cost
+		lineageTag: 8d0f0fcc-81b3-4e81-a9d6-fe40f83a56e2
+
+	measure 'Est. Cost per Tonne (INR)' = DIVIDE ( SUM ( fact_trips[EstFreightCostINR] ), SUM ( fact_trips[CapacityUsedMT] ) )
+		formatString: #,0
+		displayFolder: 4. Utilisation, anomalies & cost
+		lineageTag: eea4a69e-ea12-4377-812e-50a172a1193e
+
+	measure 'Carrier Color' = SWITCH ( TRUE (), [OTIF vs Expected (pp)] <= -15, "#DC2626", [OTIF vs Expected (pp)] >= 15, "#16A34A", "#94A3B8" )
+		displayFolder: 5. UI Helpers
+		lineageTag: 51b48f95-94c4-481f-a316-faf6ecc13a55
+
+	measure 'Avg Dest Latitude' = AVERAGE ( fact_trips[DestLat] )
+		formatString: 0.00
+		displayFolder: 5. UI Helpers
+		lineageTag: ee235799-0c0e-4dae-a881-19b32dd029f5
+
+	measure 'Avg Dest Longitude' = AVERAGE ( fact_trips[DestLon] )
+		formatString: 0.00
+		displayFolder: 5. UI Helpers
+		lineageTag: b253b65c-24d0-4990-8a3d-bdd75546503b
+
+	measure 'Selected State' = SELECTEDVALUE ( fact_trips[DestinationState], "All destinations" )
+		displayFolder: 5. UI Helpers
+		lineageTag: 56cd30f7-1238-4f66-94e9-38b8a9b9788b
+
+	measure 'Drill Title' = "Shipment Detail  |  " & [Selected State] & "  ·  " & FORMAT ( [Trips], "#,0" ) & " trips  ·  OTIF " & FORMAT ( [OTIF %], "0.0%" )
+		displayFolder: 5. UI Helpers
+		lineageTag: 8a37e621-3488-4cb7-9b94-e61f207a6c7e
+
+	column Column
+		dataType: string
+		isHidden
+		lineageTag: 1f93201e-7009-4df8-b1f0-0b033ccb1d91
+		summarizeBy: none
+		sourceColumn: Column
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [Column = text], {})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

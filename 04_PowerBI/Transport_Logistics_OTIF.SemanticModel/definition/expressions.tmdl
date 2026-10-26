@@ -1,0 +1,6 @@
+/// Folder that holds the processed CSV files. Change this to your local path, then Refresh.
+expression DataFolder = "G:\My Drive\HAVEN PORTFOLIO\01_PROJECTS\Project\Buổi 10-11_ Case Study tổng hợp\Project 2 - Transportation and Logistics Analytics\02_Data\processed\" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: 0715688c-98d5-4bd1-897c-5fa0858c186c
+
+	annotation PBI_ResultType = Text
+

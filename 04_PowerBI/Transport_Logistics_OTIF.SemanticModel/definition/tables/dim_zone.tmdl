@@ -1,0 +1,24 @@
+table dim_zone
+	lineageTag: d293f262-9b6f-44ed-9099-7893420fc82d
+
+	column DestinationZone
+		dataType: string
+		isKey
+		lineageTag: 001dea55-8726-4bd7-872c-f69a1b7c774b
+		summarizeBy: none
+		sourceColumn: DestinationZone
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_zone = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "dim_zone.csv"), [Delimiter = ",", Columns = 1, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"DestinationZone", type text}}, "en-US")
+				in
+				    ChangedType
+
+	annotation PBI_ResultType = Table
+
